@@ -1,0 +1,80 @@
+header{
+	background-image:url("../img/slider.jpg");
+	background-size: auto 100%;
+    background-repeat:no-repeat;
+    background-position-x: 68%;
+    background-position-y: center;
+    background-size: cover;
+    @media screen and (min-width: 575px) {background-position-x: 65%;}
+    @media screen and (min-width: 992px) {background-position-x: 65%;}
+    @media screen and (min-width: 1200px) {background-position-x: center;}
+    height: 100vh;
+
+	.logo{
+		a span{
+			font-size: 30px;
+            font-weight: 400;
+            height: 24px;
+            color:rgba(0,0,0,0.9);
+            &:last-child{color:$green;}
+		}
+	}
+	.cos-nav li a{font-size: 15px;
+     font-weight:400;
+     line-height: 24px;
+     color: rgb(55, 66, 77);
+     letter-spacing: 1px;
+     transition: color 0.3s ease;
+     @media screen and (max-width: 575.98px) {display: none;}
+     &:hover{color:$green;}
+     
+     }
+     .cos-nav li:first-child a{color:$green;}
+
+     .slider{position: relative;
+           // height: 91vh;
+           width: 100%;
+           .slider-content{
+            p{
+                font-size: 14px;
+                font-weight: 400;
+                color:#666666;
+                font-style: italic;
+            }
+           }
+
+       }
+
+    .animation-button{
+        width: 30px;
+        height: 60px;
+        border:2px solid $green;
+        border-radius: 17px;
+        .circle{
+            padding: 4px;
+            background:$green;
+            border-radius:90%;
+            display: inline-block;
+            transform: translate(-50%,50%);
+            margin-top: 0;
+            margin-left: 50%;
+             animation-name: tp-bt;
+             animation-duration: 4s;
+             animation-iteration-count: infinite;
+        }
+        
+    }
+      
+
+    
+}
+
+ @keyframes tp-bt {
+            0%   {margin-top:-50%;
+                   
+            }
+            50%  {margin-top:125%;}
+
+        }
+
+ 

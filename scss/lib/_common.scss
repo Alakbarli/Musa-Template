@@ -1,0 +1,104 @@
+body{
+	font-family:"Open Sans" sans-serif;}
+
+
+a{
+	text-decoration-line: none;
+	color:rgba(0,0,0,.9);
+	&:hover{
+		text-decoration: none;
+	}
+}
+p{
+      color:#626262;
+}
+
+.cos-button{padding: 7px 30px;
+            background-color: $green;
+            color: white;
+            border:2px solid $green;
+            border-radius:3px;
+            position: relative;
+            overflow: hidden;
+            transition:all 0.5s ease;
+            display: inline-block;
+            span{   position: relative;
+                  z-index: 2;}
+            &:hover{color:$green;
+
+                  .cos-overlay-left{
+                        top: 0px;
+                        right: 0px;
+                  }
+                  .cos-overlay-top{
+                        top: 0px;
+                        right: 0px;
+                  }
+            	   
+            	     
+            	     }
+      .cos-overlay-left{
+            width: 100%;
+            height: 100%;
+            background:white;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            right: 200px;
+            transition:all 0.5s ease;
+      }
+      .cos-overlay-top{
+            @extend .cos-overlay-left;
+            top:-200px;
+            right:0px;
+      }
+
+
+}
+
+
+.heading{
+      text-align: center;
+      h2{
+            font-size: 32px;
+            font-weight: 600;
+            font-height:32px;
+            color:#2e2e2e;
+      }
+
+      p{
+            font-size: 14px;
+            font-weight: 400;
+            font-height:24px;
+            color: #626262;
+
+      }
+
+      .cos-line{
+            position: relative;
+            display: inline-block;
+
+            &::after{
+                  content: "";
+                  background-color:$green;
+                  position: absolute;
+                  left:50%;
+                  bottom:50%;
+                  transform: translate(-50%,50%);
+                  width: 100px;
+                  height: 2px;
+                  background-color:$green;
+            }
+
+            .cos-line-content{
+                  width: 12px;
+                  height: 12px;
+                  display: inline-block;
+                  background-color:$green;
+                  transform: rotate(45deg);
+
+            }
+
+      }
+}
+
